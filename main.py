@@ -41,4 +41,4 @@ def debug_nlp():
 # Hauptprogramm: Flask-Server starten
 if __name__ == "__main__":
  # Stelle sicher, dass die App auf Port 8000 läuft
- app.run(host="0.0.0.0", port=8000) 
+ app.run(host="0.0.0.0", port=8000)  
