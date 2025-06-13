@@ -21,7 +21,6 @@ def analyze_text():
  sentiment = "Negativ"
  else:
  sentiment = "Neutral"
-Seite 5 von 9
  return jsonify({"sentiment": sentiment, "score": sentiment_score})
 # Sicherstellen, dass die NLP-Daten richtig geladen werden
 NLTK_PATH = os.path.join(os.path.dirname(__file__), "nltk_data")
