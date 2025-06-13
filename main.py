@@ -12,15 +12,15 @@ def analyze_text():
  data = request.get_json()
  text = data.get("text", "")
  if not text:
- return jsonify({"error": "Kein Text erhalten"}), 400
+    return jsonify({"error": "Kein Text erhalten"}), 400
  # Sentiment-Analyse mit TextBlob
  sentiment_score = TextBlobDE(text).sentiment.polarity
  if sentiment_score > 0:
- sentiment = "Positiv"
+    sentiment = "Positiv"
  elif sentiment_score < 0:
- sentiment = "Negativ"
+    sentiment = "Negativ"
  else:
- sentiment = "Neutral"
+    sentiment = "Neutral"
  return jsonify({"sentiment": sentiment, "score": sentiment_score})
 # Sicherstellen, dass die NLP-Daten richtig geladen werden
 NLTK_PATH = os.path.join(os.path.dirname(__file__), "nltk_data")
@@ -40,4 +40,4 @@ def debug_nlp():
 # Hauptprogramm: Flask-Server starten
 if __name__ == "__main__":
  # Stelle sicher, dass die App auf Port 8000 läuft
- app.run(host="0.0.0.0", port=8000)  
+    app.run(host="0.0.0.0", port=8000)  
